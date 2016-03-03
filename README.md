@@ -132,5 +132,15 @@ Change the routes in line 2,3 to
   <%= link_to "All Users",  users_path %>
 ```
 
+## Now Time to move our build on production
+```sh
+  $ bundle install --without production
+  $ git add .
+  $ git commit -a -m "Update Gemfile.lock for Heroku"
+  $ heroku create
+  $ git push heroku master
+  $ heroku run rake db:migrate
+  $ heroku apps:rename paxcel_session_app
+```
 
 
