@@ -66,9 +66,9 @@ Change the routes in line 2,3 to
  	$ rails server
 ```
 
-**ERROR**
-## Add the below line to file "app/views/users/show.html.erb" after line no. 17
 
+## Add the below line to file "app/views/users/show.html.erb" after line no. 17
+**ERROR**
 ```sh
  	</br>
 	</br>
@@ -78,56 +78,61 @@ Change the routes in line 2,3 to
 	</br>
 	</br>
 ```
-**ERROR**
-## Change the line in file "app/views/articles/index.html.erb" at line no. 31 to 
 
+## Change the line in file "app/views/articles/index.html.erb" at line no. 31 to 
+**ERROR**
 ```sh
  <%= link_to 'New Article', new_user_article_path %>
 ```
 
-**ERROR**
-## Change the code in function "NEW" in file "app/controllers/articles" to 
 
+## Change the code in function "NEW" in file "app/controllers/articles" to 
+**ERROR**
 ```sh
   @user = User.find(params[:user_id])
   @article = @user.articles.new
 ```
 
-**ERROR**
+
 ## Change the line in file "app/views/articles/_form.html.erb" at line 1 to 
+**ERROR**
 ```sh
   <%= form_for([@user, @article]) do |f| %>
 ```
 
-**Functionality:** User ID is visible, lets hide it
+
 ## Change the line in file "app/views/articles/_form.html.erb" at line 22 to 
+**Functionality:** User ID is visible, lets hide it
 ```sh
   <div class="field" style="display:none">
 ```
 
-**ERROR**
+
 ## Change the line in file "app/views/articles/new.html.erb" at line 5 to 
+**ERROR**
 ```sh
   <%= link_to 'Back', user_articles_path %>
 ```
 
+## Change the process of saving article with user. Add and modify code in file "app/controllers/
+articles" at line 28 to
 **ERROR**
-## Change the process of saving article with user. Add and modify code in file "app/controllers/articles" at line 28 to
 
 ```sh
   @user = User.find(params[:user_id])
   @article = @user.articles.new(article_params)
 ```
 
-**ERROR**
 ## Change the line in file "app/views/articles/show.html.erb" at line 19 and in file 
+**ERROR**
 "app/views/articles/edit.html.erb" at line 6 to 
 ```sh
   <%= link_to 'Back', user_articles_path(user_id: @article.user.id) %>
 ```
 
-**Functionality:** Link in Article List which redirects to User List
+
 ## Add line in file "app/views/articles/index.html.erb" at line 32
+**Functionality:** Link in Article List which redirects to User List
 ```sh
   <%= link_to "All Users",  users_path %>
 ```
@@ -140,7 +145,7 @@ Change the routes in line 2,3 to
   $ heroku create
   $ git push heroku master
   $ heroku run rake db:migrate
-  $ heroku apps:rename paxcel_session_app
+  $ heroku apps:rename paxcel-session-app
 ```
 
 
