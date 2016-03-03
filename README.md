@@ -18,7 +18,7 @@ $ rails generate scaffold article title content:text user:references
 ```
 
 
-## Lets make the root of site to user list and inherit the article route in user route
+## Make the default route to user list and inherit the article routes in user routes
 
 **Change in config/routes.rb**. 
 
