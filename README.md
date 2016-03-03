@@ -44,7 +44,7 @@ Change the routes in line 2,3 to
 
 ## Make a join between User and Article in models
 
-**Add the below line to file "app/models/user.rb" before end
+**Add the below line to file "app/models/user.rb" before end**
 
 ```sh
  	has_many :articles
